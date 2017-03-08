@@ -1,0 +1,1 @@
+Bundle 'garbas/vim-snipmate'

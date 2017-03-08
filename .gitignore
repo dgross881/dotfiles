@@ -1,0 +1,6 @@
+# Vim persistent undo files
+*.swp
+
+# Ignore Vim bundles
+.vim/bundle/
+

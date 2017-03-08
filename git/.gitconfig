@@ -1,0 +1,47 @@
+[user]
+	name = dgross881
+	email = dgross881@gmail.com
+[credential]
+	helper = osxkeychain
+[push]
+	default = upstream
+[color]
+	ui = true
+[core]
+	excludesfile = ~/.gitignore
+	editor = /usr/bin/vim
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[merge]
+  ff = only
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[fetch]
+  prune = true 
+[init]
+	templatedir = ~/.git_template
+[alias]
+  aa = add --all
+  b = branch
+  browse = !hub browse
+  compare = !hub compare
+  issues  = !hub browse --issues
+  conflicts = !git ls-files -u | awk '{print $4}' | sort -u 
+	ctags = !.git/hooks/ctags
+	sla = log --oneline --decorate --graph --all
+  sl  = log --oneline --decorate -20 
+	pretty-log = log --pretty=format:'%C(yellow)%h%C(reset) - %an [%C(green)%ar%C(reset)] %s'
+	glog = log -E -i --grep
+	car = commit --amend --no-edit
+  master = checkout/master
+	uncommit = reset --soft HEAD^
+  df = diff --word-diff --color-words
+  fall = "!for remote in $(git remote); do echo "Fetching $remote"; git fetch "$remote"; done"
+[color "diff"]
+	meta = blue black bold
+[github]
+	user = dgross881
+[ghi]
+[ghi]
